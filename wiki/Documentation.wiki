@@ -1,0 +1,9 @@
+#summary Documentation for Canonical URLs
+
+= Theory of Operation =
+
+Add your content here.
+
+
+= Settings =
+
