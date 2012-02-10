@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="system" method="upgrade">
+  <name>Finch - Canonical URLs</name>
+  <author>Jason Lowry</author>
+  <creationDate>8 February 2012</creationDate>
+  <copyright>(C) 2012 Jason Lowry</copyright>
+  <license>GNU/GPL</license>
+  <authorEmail>jason@finch.com</authorEmail>
+  <authorUrl>http://www.finch.com/</authorUrl>
+  <description>Choose a language to be the canonical link to reduce duplicate content.</description>
+  <version>1.0.0</version>
+	<files>
+    <filename plugin="canonical">canonical.php</filename>
+  </files>
+  <config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="catids" type="category" multiple="true" extension="com_content" label="Select a category" description="Select the categories that you want to canonicalize" />
+			<field name="domain" type="text" size="30" default="" label="Enter a domain (optional)" description="Enter a domain that you want to canonicalize with http:// or https:// - otherwize leave blank"/>
+			<field name="canonical_lang" type="sql" default='en-US' label="Select the canonical language" query="select lang_code, title_native from #__languages where published=1;" key_field="lang_code" value_field="title_native" />
+     	</fieldset>	
+     </fields>
+  </config>
+</extension>
+
