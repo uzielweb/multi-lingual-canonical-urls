@@ -89,11 +89,16 @@ class plgSystemCanonical extends JPlugin
 		if (isset($catID) && isset($itemid)) {
 			$canonical_url = $domain.JRoute::_('index.php?view=article&Itemid='.$itemid.'&lang='.$canonical_sef.'&catid='.$catID.'&id='.$article);
 			return $canonical_url;
+		} else if (isset($catID)) {
+				$canonical_url = $domain.JRoute::_('index.php?view=article&catid='.$catID.'&id='.$article.'&lang='.$canonical_sef);
 		} else {
-			$canonical_url = $domain.JRoute::_('index.php?lang='.$canonical_sef);
-			return $canonical_url;
+				$canonical_url = $domain.JRoute::_('index.php?lang='.$canonical_sef);
 		}
+		if (isset($canonical_url)) {
+			return $canonical_url;
+		} else {
 		return false;
+		}
 	}
   
 	function getCategoryURL ($app,$domain,$canonical_lang,$canonical_sef) {
