@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="1.0" type="plugin" group="system" method="upgrade">
-  <name>Finch - Canonical URLs</name>
+  <name>Multi-lingual Canonical URLs</name>
   <author>Jason Lowry</author>
   <creationDate>8 February 2012</creationDate>
   <copyright>(C) 2012 Jason Lowry</copyright>
   <license>GNU/GPL</license>
   <authorEmail>jason@finch.com</authorEmail>
-  <authorUrl>http://www.finch.com/</authorUrl>
+  <authorUrl>http://multi-lingual-canonical-urls.googlecode.com</authorUrl>
   <description>Choose a language to be the canonical link to reduce duplicate content.</description>
   <version>1.0.0</version>
 	<files>
